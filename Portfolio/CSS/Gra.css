@@ -1,0 +1,56 @@
+/*gra css stworzona dla celow testowych*/
+
+body
+{
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../img/powitanie.JPG");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+}
+
+#button
+{
+	display: table;
+	bottom: 5%;
+	left: 45%;
+	position: absolute; 
+}
+#button a:hover
+{
+	cursor: pointer;
+	opacity: 1;
+	transition: 0.3s;
+}
+#button a{
+	box-shadow: 0px 6px 0px 0px #899599;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+	background-color:#ededed;
+	border-radius:20px;
+	border:2px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#3a8a9e;
+	font-family:Trebuchet MS;
+	font-size:20px;
+	font-style:italic;
+	padding:15px 42px;
+	text-decoration:none;
+	text-shadow: 0px 1px 0px #e1e2ed;
+	opacity: 0.5;
+}
+#button a:active
+{
+	position: relative;
+	bottom: -3px;
+	box-shadow: 1px 2px 0px 0px #899599;
+}
+canvas{
+    background-color: white;
+}
