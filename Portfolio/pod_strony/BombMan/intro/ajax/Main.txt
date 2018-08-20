@@ -1,0 +1,5 @@
+ <ul id="pkt">
+        <li>START</li>
+        <li>STEROWANIE</li>
+        <li>WYNIKI</li>
+</ul>

@@ -1,0 +1,9 @@
+<h2>STEROWANIE ODBYWA SIE ZA POMOCA KLAWIATURY:</h2>
+    
+   <ul >
+        <li>&larr; &ndash; lewo</li >
+        <li>&rarr; &ndash; prawo</li >
+        <li>&darr; &ndash; gora</li >
+        <li>&uarr; &ndash; dol</li >
+        <li>BomB &ndash; spacja</li >
+    </ul>

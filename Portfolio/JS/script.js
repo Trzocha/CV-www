@@ -1,22 +1,24 @@
 $("document").ready(
         function (){
-            $(".fa.fa-bars").click(
+        var i=1;
+            $("#hamburger").click(
                 function (){
-                    console.log("bars");
-                    $("#barsPage").css("visibility","visible").animate({
-                        height:"100%"
-                    },1000);
+                    if(i%2){
+                        i++;
+                        $(this).toggleClass("change");
+                        $("#barsPage").css("visibility","visible").animate({
+                            height:"100%"
+                        },1000);
+                    }else{
+                      i++;
+                        $(this).toggleClass("change");
+                        $("#barsPage").animate({
+                                height:0
+                            },1000,function(){
+                                $("#barsPage").css("visibility","hidden");} ); 
+                            }
                 }
             );
-    
-            $("#barsPage .fa.fa-times").click(
-                function (){
-                    $("#barsPage").animate({
-                        height:0
-                    },1000,function(){$(this).css("visibility","hidden");} ); 
-                }
-            );
-    
             let activePage = 0;
             let prevPage = 0;
             $("#moveSubPage span").click(

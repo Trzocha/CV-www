@@ -15,9 +15,6 @@ body{
     position: relative;
     background-image: url('../img/pic01.jpg');
     background-attachment:fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     background-position: center center;
 }
@@ -29,6 +26,7 @@ body{
 }
 h1,h2,h3{
    position: absolute;
+   -webkit-transform: translate(-50%,0);
    transform: translate(-50%,0);
 }
 h1{
@@ -48,21 +46,46 @@ h3{
     text-align: center;
 }
 #authorImg{
-    width: 20rem;
+    width: 18rem;
     height: 20rem;
     position: absolute;
     border-radius: 50%;
     top: 70%;
     left: 50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     border: .4rem solid white;
 }
-.fa.fa-bars{
+#hamburger{
     position: absolute;
     top:5%;
     right: 10%;
     color: #fff;
+    cursor: pointer;
+    z-index: 1;
 }
+.one, .two, .three {
+    width: 35px;
+    height: 5px;
+    background-color: transparent;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    color: #fff;
+}
+
+.change .one {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .two {opacity: 0;}
+
+.change .three{
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
 #barsPage{
     position: absolute;
     top:0;
@@ -77,6 +100,7 @@ h3{
     position: absolute;
     top:50%;
     left:50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     color: #fff;
     list-style: none;
@@ -104,7 +128,7 @@ h3{
     right: 10%;
     font-size: 5rem;
 }
-#secondPage,#thirdPage,#contact{
+#secondPage,#thirdPage,#contact,#fourPage{
     height: 100%;
     width: 100%;
     background-color: #d4d2d4;
@@ -113,14 +137,19 @@ h3{
 #thirdPage{
     background-color: #604531;
 }
+#fourPage{
+     background-color: #d4d2d4;
+}
 #contact{  
     height: 70%;
+    background-color: #604531;
 }
 #aboutMe,#education,#course{
     height: 80%;
     width: 80%;
     top:50%;
     left:50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     position: absolute;
     overflow: visible;
@@ -136,7 +165,7 @@ h3{
     padding-left: 1rem;
     border-bottom: .5rem solid #ed4a34;
 }
-#thirdPage h4,#contact h4{
+#thirdPage h4,#contact h4, #fourPage h4{
     width: 80%;
     font-size: 4rem;
     position: absolute;
@@ -145,11 +174,39 @@ h3{
     padding-left: 1rem;
     left:50%;
     top:10%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     color:#fff;
 }
+#iconProject{
+    height: 60%;
+    width: 80%;
+    position: absolute;
+    top:55%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+#iconProject a{
+    padding-right: 10px;
+}
 #contact h4{
-    color:#000;
+    color:#fff;
 }
 #PG{
      position: relative;
@@ -201,6 +258,7 @@ article{
     position: absolute;
     bottom: 5%;
     left:50%;
+    -webkit-transform: translate(-50%,0%);
     transform: translate(-50%,0%);  
 }
 #icon a{
@@ -219,6 +277,7 @@ article{
     position: absolute;
     bottom: 5%;
     left:50%;
+    -webkit-transform: translate(-50%,0);
     transform: translate(-50%,0);
     text-align: center;
 }
@@ -242,16 +301,27 @@ article{
     position: absolute;
     top:50%;
     left:50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 #iconDevelop img{
-    width: 10rem;
-    height: 10rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
     margin:0 1rem 1rem 1rem;
 }
@@ -260,16 +330,19 @@ article{
     position: absolute;
     bottom:0;
     left:50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     font-size: 1.3rem;
     width: 100%;
     text-align: center;
+    color: #fff;
 }
 form{
     width: 80%;
     position: absolute;
     top:20%;
     left:50%;
+    -webkit-transform: translate(-50%,0%);
     transform: translate(-50%,0%);
     text-align: center;
 }
@@ -282,13 +355,17 @@ input, textarea {
      margin-top: 1em;
      resize: none;   
 }
+/*
 #input-name,#input-email{
     width: 37%;
     display: inline-block;
 }
+*/
+/*
 #input-name{
     margin-right: 1rem;
 }
+*/
 #input-submit {
      color: white; 
      background: #ed4a34;
@@ -312,6 +389,7 @@ textarea {
     }
     h3{
         top:35%;
+        -webkit-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
     }
     #authorImg{
@@ -362,13 +440,19 @@ textarea {
     #contact{
         height: 100%;
     }
+/*
     #input-name{
         width: 42%;
         margin-right: 1.5rem;
     }
+*/
     input,textarea{
         padding: 0.9rem;
         width: 86%;
+    }
+    #iconDevelop img{
+        width: 7.5rem;
+        height: 7.5rem;
     }
 }
 @media (orientation:landscape) and (min-width: 640px){
@@ -379,6 +463,13 @@ textarea {
 @media (orientation:landscape) and (min-width: 732px){
     h1{left:35%;}
     h2{left:64%;}
-    #iconDevelop{width: 60%;}
+    #iconDevelop{width: 70%;}
     #contact{ height: 80%; }
+    #iconDevelop img{width: 10rem; height: 10rem;}
+}
+@media (orientation:landscape) and (min-width: 2048px){
+    #authorImg{
+        width: 25rem;
+        height: 27rem;
+    }
 }

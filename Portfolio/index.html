@@ -6,34 +6,33 @@
 		<title>Portfolio Trzoska Sebastian</title>
                 <meta name="keywords" content="praca, webdeveloper, junior frontend, JavaScript, HTML5, CSS3, projekt, portfolio,CV">
                 <meta name="description" content="Projekt strony WWW, portfolio, CV. Szukam pracy jako Junior Front-End Developer w Trójmieście">
-                <link href="https://fonts.googleapis.com/css?family=Monda:400,700" rel="stylesheet">
                 <link href="https://fonts.googleapis.com/css?family=Dancing+Script|EB+Garamond" rel="stylesheet">
                 <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-                <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-                
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
                 <link rel="stylesheet" href="CSS/style.css">
                 <meta name="robots" content="index,follow">
                 <meta name="author" content="Sebastian Trzoska">
                
 	</head>
         <body>
-            <section id="firstPage">
+            <section id=firstPage>
+               <div id='hamburger'>
+                   <div class="one"></div>
+                   <div class="two"></div>
+                   <div class="three"></div>
+               </div>
+<!--               <button id="hamburger"></button>-->
+               <div>
                 <header id="name"> 
                     <h1>Sebastian</h1>
                     <h2>Trzoska</h2>
                     <h3>Junior Frontend Developer</h3>
                  </header>
                 <figure>
-                    <img id="authorImg" src="img/ST3.jpg"/>
-                    <i class="fa fa-bars fa-4x"></i>
+                    <img id="authorImg" src="img/ST.jpg"/>
                 </figure>
-            </section>
-            <section id="barsPage">
-                <figure>
-                    <i class="fa fa-times"></i>
-                </figure>
+                </div>
+                
+                <div id="barsPage">
                 <nav>
                     <ul>
                         <li><a href="#aboutMe">O mnie</a></li>
@@ -41,6 +40,7 @@
                         <li><a href="#contact">Kontakt</a></li>
                     </ul>
                 </nav>
+            </div>
             </section>
             <section id="secondPage">
                 <figure id="moveSubPage">
@@ -52,8 +52,7 @@
                     <h4>O mnie</h4>
                     <article>
                         <p>Nazywam się <b><em>Trzoska Sebastian</em></b>. Jestem studentem Politechniki Gdańskiej, ambitny, chętny do zdobywania wiedzy oraz nowych doświadczeń. Lubię wyzwania i chętnie się ich podejmę.</p>
-                        <br><br><p>Doświadczenia z programowaniem mam od 2 lat, w tym pół roku akademickiego. Każdą wolną chwilę poświęcam programowaniu. Obecnie zajmuję się projektowaniem frontend stron internetowych. Posiadane umiejętności pozwalają, aby dać oczekiwany efekt wizualny i funkcjonalny. Moje projekty można zobaczyć na profilu <strong>GitHub</strong>.</p>
-                        <br><br><p>Aktualnie szukam pracy jako <b><strong>Junior Front-End Developer</strong></b>na terenie Trójmiasta.</p>
+                        <br><br><p>Doświadczenie z programowaniem posiadam niekomercyjne od ponad 2 lat. Każdą wolną chwilę poświęcam kodowaniu. Obecnie zajmuję się zagłębianiem tematyki projektowania frontend stron internetowych. Posiadane umiejętności pozwalają, aby dać oczekiwany efekt wizualny i funkcjonalny, którego oczekuje. Moje projekty można zobaczyć na profilu <strong>GitHub</strong> oraz <strong>TUTAJ</strong></p>
                     </article>
                     <figure id="icon">
                         <a href="https://github.com/Trzocha"><i class="fa fa-github"></i></a>
@@ -84,8 +83,10 @@
                     <h4>Kursy &amp; Szkolenia</h4>
                     <menu>
                         <ul>
-                            <li><p>Tworzenia Stron WWW w <strong>HTML, CSS</strong> od Podstaw do Eksperta, ukończony certyfikatem z portalu Udemy.com</p></li>
-                            <li><p><strong>PHP & MySQL</strong> od Podstaw do Eksperta, ukończony certyfikatem z portalu Udemy.com</p></li>
+                            <li><p>Tworzenia Stron WWW w <strong>HTML, CSS</strong> od Podstaw do Eksperta z portalu Udemy.com</p></li>
+                            <li><p><strong>PHP & MySQL</strong> od Podstaw do Eksperta z portalu Udemy.com</p></li>
+                            <li><p>Web Design for Web Developers: Build Beautiful Websites z portalu Udemy.com</p></li>
+                            <li><p><strong>React JS</strong> Web Developer with ES6 z potralu Udemy.com</p></li>
                         </ul>
                     </menu>
                 </div>
@@ -99,21 +100,27 @@
                     <img src="img/jquery.png">
                     <img src="img/rwd.png">
                     <img src="img/cpp.png">
+                    <img src="img/react-logoo.png">
                 </figure>
             </section>
+            <section id="fourPage">
+                <h4>Projekty</h4>
+                <figure id="iconProject">
+                    <a href="pod_strony/BombMan/index.html"><img src="img/BombMan.png"></a>
+                    <a href="pod_strony/Log-in-out/index.html"><img src="img/log-in-out.png"></a>
+                </figure>
+            </section>
+            
             <section id="contact">
                 <h4>Kontakt</h4>
                 <form method="POST" action="public_html/sendmail.php">
-                <div>
-                    <input type="text" name="name" id="input-name" placeholder="Name">
-                    <input type="email" name="mail" id="input-email" placeholder="Email address">
-                </div>
+                <input type="text" name="name" id="input-name" placeholder="Name"> 
                 <input type="text" name="subject" id="input-subject" placeholder="Subject">
                 <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
                  <input type="submit" value="Submit" id="input-submit">
             </form>
                 <footer>
-                    <div id="authorInfo">&copy; 2017, created by <em>Trzoska Sebastian</em></div>
+                    <div id="authorInfo">&copy; 2018, created by <em>Trzoska Sebastian</em></div>
                 </footer>
             </section>
             <section>
