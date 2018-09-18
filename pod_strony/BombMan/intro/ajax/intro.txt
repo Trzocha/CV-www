@@ -1,0 +1,19 @@
+<div id="errSpace" class="err">
+    <p>Aplikacja przystosowana do orientacji pionowej ekranu</p>
+    <img src="game/img/rotation.png">
+</div>
+<div id="contener">
+            <div id="obrazek">
+                <div id="otoczka"></div>
+                <div id="glowne"></div>
+                <h1>BombMan</h1>
+            </div>
+
+            <div id="menuu">
+                <ul id="pkt">
+                    <li>START</li>
+                    <li>STEROWANIE</li>
+                    <li>WYNIKI</li>
+                </ul>
+            </div>
+</div>

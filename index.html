@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio Trzoska Sebastian</title>
+                <meta name="keywords" content="praca, webdeveloper, junior frontend, JavaScript, HTML5, CSS3, projekt, portfolio,CV">
+                <meta name="description" content="Projekt strony WWW, portfolio, CV. Szukam pracy jako Junior Front-End Developer w Trójmieście">
+                <link href="https://fonts.googleapis.com/css?family=Dancing+Script|EB+Garamond" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+                <link rel="stylesheet" href="CSS/styleRWD.css">
+                <meta name="robots" content="index,follow">
+                <meta name="author" content="Sebastian Trzoska">
+               
+	</head>
+        <body>
+            <section id=firstPage>
+               <div id='hamburger'>
+                   <div class="one"></div>
+                   <div class="two"></div>
+                   <div class="three"></div>
+               </div>
+<!--               <button id="hamburger"></button>-->
+               <div id="visitCard">
+                <header id="name"> 
+                    <h1>Sebastian Trzoska</h1>
+<!--                    <h2>Trzoska</h2>-->
+                    <h3>Junior Frontend Developer</h3>
+                 </header>
+                    <figure>
+                        <img id="authorImg" src="img/ST.jpg"/>
+                    </figure>
+                </div>
+                
+                <div id="barsPage">
+                <nav>
+                    <ul>
+                        <li><a href="#aboutMe">O mnie</a></li>
+                        <li><a href="#thirdPage">Umiejętności</a></li>
+                        <li><a href="#fourPage">Projekty</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+            </section>
+            <section id="secondPage">
+                <figure id="moveSubPage">
+                    <span id="0" class="circle"></span>
+                    <span id="1" class="circle"></span>
+                    <span id="2" class="circle"></span>
+                </figure>
+                <div id="aboutMe">
+                    <h4>O mnie</h4>
+                    <article>
+                        <p>Nazywam się <b><em>Trzoska Sebastian</em></b>. Jestem studentem Politechniki Gdańskiej, ambitny, chętny do zdobywania wiedzy oraz nowych doświadczeń. Lubię wyzwania i chętnie się ich podejmę.</p>
+                        <br><br><p>Doświadczenie z programowaniem posiadam niekomercyjne od ponad 2 lat. Każdą wolną chwilę poświęcam kodowaniu. Obecnie zajmuję się zagłębianiem tematyki projektowania frontend stron internetowych. Posiadane umiejętności pozwalają, aby dać oczekiwany efekt wizualny i funkcjonalny, którego oczekuje. Moje projekty można zobaczyć na profilu <strong>GitHub</strong> oraz <strong><a href="#fourPage">TUTAJ</a></strong></p>
+                    </article>
+                    <figure id="icon">
+                        <a href="https://github.com/Trzocha"><i class="fa fa-github"></i></a>
+                        <a href="https://facebook.com/sebastian.trzoska"><i class="fa fa-facebook-official"></i></a>
+                        <a href="https://linkedin.com/in/sebastian-trzoska-2a826a138/"><i class="fa fa-linkedin-square"></i></a>
+                    </figure>
+                </div>
+                <div id="education">
+                    <h4>Edukacja</h4>
+                    <article>
+                        <div id="PG">
+                            <h5>Politechnika Gdańska</h5>
+                            <time>2016-TERAZ</time>
+                            <br><br><p>Wydział Elektronika, Telekomunikacja i Informatyka</p>
+                            <p>Kierunek: Informatyka</p>
+                            <br><br><time>2010-2014</time>
+                            <br><br><p>Wydział Elektrotechnika i Automatyka</p>
+                            <p>Kierunek: Elektrotechnika zakończone Dyplomem Inżyniera</p>
+                        </div> 
+                        <div id="Technic">
+                            <h5>Zespół Szkół Ponadgimnazjalnych nr 3 w Wejherowie</h5>
+                           <br><br> <time>2006-2010</time>
+                            <br><br><p>Technikum Informatyczne zakończone Dyplomem</p>
+                        </div>
+                    </article>
+                </div>
+                 <div id="course">
+                    <h4>Kursy &amp; Szkolenia</h4>
+                    <menu>
+                        <ul>
+                            <li><p>Tworzenia Stron WWW w <strong>HTML, CSS</strong> od Podstaw do Eksperta z portalu Udemy.com</p></li>
+                            <li><p><strong>PHP & MySQL</strong> od Podstaw do Eksperta z portalu Udemy.com</p></li>
+                            <li><p>Web Design for Web Developers: Build Beautiful Websites z portalu Udemy.com</p></li>
+                            <li><p><strong>React JS</strong> Web Developer with ES6 z potralu Udemy.com</p></li>
+                        </ul>
+                    </menu>
+                </div>
+            </section>
+            <section id="thirdPage">
+                <h4>Umiejętności</h4>
+                <figure id="iconDevelop">
+                    <img src="img/html.png">
+                    <img src="img/css.png">
+                    <img src="img/js.png">
+                    <img src="img/jquery.png">
+                    <img src="img/rwd.png">
+                    <img src="img/cpp.png">
+                    <img src="img/react-logoo.png">
+                </figure>
+            </section>
+            <section id="fourPage">
+                <h4>Projekty</h4>
+                <figure id="iconProject">
+                    <a href="pod_strony/BombMan/index.html"><img src="img/BombMan.png"></a>
+                    <a href="pod_strony/Log-in-out/index.html"><img src="img/log-in-out.png"></a>
+                </figure>
+            </section>
+            
+            <section id="contact">
+                <h4>Kontakt</h4>
+                <form method="POST" action="public_html/sendmail.php">
+                <input type="text" name="name" id="input-name" placeholder="Name"> 
+                <input type="text" name="subject" id="input-subject" placeholder="Subject">
+                <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+                 <input type="submit" value="Submit" id="input-submit">
+            </form>
+                <footer>
+                    <div id="authorInfo">&copy; 2018, created by <em>Trzoska Sebastian</em></div>
+                </footer>
+            </section>
+            <section>
+                <script src="JS/jquery.js"></script>
+                <script src="JS/script.js"></script>
+                <script src="JS/Scroll.js"></script>
+            </section>
+	</body>
+</html>
+
