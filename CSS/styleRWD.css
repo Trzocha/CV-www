@@ -15,11 +15,11 @@ li a{
 #firstPage{
     height: 100%;
     width: 100%;
-    position: relative;
     background-image: url('../img/pic01.jpg');
     background-attachment:fixed;
     background-size: cover;
     background-position: center center;
+    background-repeat: no-repeat;
 }
 #name{ 
     font-family: 'EB Garamond', serif;
@@ -60,31 +60,51 @@ h3{
 }
 #hamburger{
     position: absolute;
-    top:5%;
+    width: 4rem;
+    height: 3.5rem;
+    top:10%;
     right: 10%;
+    -webkit-transition: .5s;
+    transition: .5s;
     background-color: transparent;
     z-index: 1;
 }
+#hamburger.change {
+    -webkit-transform: rotate(-90deg) ;
+    transform: rotate(-90deg) ;
+}
 .one, .two, .three {
-    width: 3.5rem;
-    height: 0.5rem;
-    margin: 0.6rem 0;
+    position: absolute;
+    width: inherit;
+    height: 20%;
     cursor: pointer;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, -webkit-transform .2s .4s;
+    transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, -webkit-transform .2s .4s;
+    transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .4s;
+    transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .4s, -webkit-transform .2s .4s;
     background-color: #fff;
 }
-
+.one{
+    top:0;
+}
+.two{
+    top:calc(50% - 3px);
+}
+.three{
+    bottom: 0;
+}
 .change .one {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+    top: calc(50% - 3px);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) ;
 }
 
 .change .two {opacity: 0;}
 
 .change .three{
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+    bottom:calc(50% - 3px);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 #barsPage{
@@ -143,14 +163,11 @@ h3{
     -ms-flex-align: center;
     align-items: center;
 }
-#thirdPage{
+#thirdPage,#contact{
     background-color: #604531;
 }
 #fourPage{
      background-color: #d4d2d4;
-}
-#contact{  
-    background-color: #604531;
 }
 #aboutMe,#education,#course{
     height: 70%;
@@ -158,6 +175,8 @@ h3{
     top:10%;
     position: absolute;
     overflow: visible;
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
 }
 #education,#course{
     visibility: hidden;   
@@ -344,9 +363,44 @@ textarea {
     height: 3rem;
 }
 a img{
-    width: 100px;
+    width: 10rem;
+}
+.slowToggleHide{
+    -webkit-animation: hideArticle 1s linear;
+    animation: hideArticle 1s linear;
+}
+@-webkit-keyframes hideArticle{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+@keyframes hideArticle{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+.slowToggleShow{
+    -webkit-animation: showArticle 1s linear;
+    animation: showArticle 1s linear;
+}
+@-webkit-keyframes showArticle{
+    0%{opacity: 0;}
+    100%{opacity: 1;} 
+}
+@keyframes showArticle{
+    0%{opacity: 0;}
+    100%{opacity: 1;} 
 }
 
+
+@media (max-height:220px) and (max-width:1366px) and (orientation: landscape){
+    html{
+        font-size: 5px;
+    }
+    #authorImg{
+        -webkit-transform: scale(.1);
+        transform: scale(.1);
+        margin-top: 12rem;
+    }
+}
 @media (min-height:310px) and (max-height:499px) and (max-width:500px) and (orientation: landscape){
     #authorImg{
         -webkit-transform: scale(.3);
@@ -485,9 +539,15 @@ a img{
     #barsPage li{
         width: 40rem;
     }
-    .one , .two , .three{
+    #hamburger{
         width: 5rem;
-        height: 0.7rem;
+        height: 3.5rem;
+    }
+    .two,  .change .one{
+        top:calc(50% - 0.5rem);
+    }
+    .change .three{
+        bottom: calc(50% - 0.5rem);
     }
     #iconDevelop img{
         width: 10rem;
@@ -514,7 +574,7 @@ a img{
         font-size: 2.5rem;
     }
     a img{
-        width: 200px;
+        width: 20rem;
     }
     textarea{
         height: 8rem;
@@ -531,7 +591,7 @@ a img{
         top:20%;
     }
 }
-@media (min-height:600px) and (max-height:1099px) and (min-width:901px) and (max-width:1100px) and (orientation: landscape){
+@media (max-height:1099px) and (min-width:901px) and (max-width:1100px) and (orientation: landscape){
     #authorImg{
         -webkit-transform: scale(.7);
         transform: scale(.7);
@@ -544,10 +604,15 @@ a img{
      h3{
         font-size: 3rem;
     }
-     .one , .two , .three{
+    #hamburger{
         width: 7rem;
-        height: 0.8rem;
-        margin: 1rem 0;
+        height: 5rem;
+    }
+    .two,  .change .one{
+        top:calc(50% - 0.5rem);
+    }
+    .change .three{
+        bottom: calc(50% - 0.5rem);
     }
     #barsPage li{
         width: 50rem;
@@ -603,5 +668,771 @@ a img{
     }
 }
 @media (max-height:599px) and (min-width:901px) and (max-width:1100px) and (orientation: landscape){
+    #authorImg{
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+        margin-top: 18rem;
+    }
+    #name{
+        font-size: 4.5rem;
+    }
+    #hamburger{
+        width: 6rem;
+        height: 4rem;
+    }
+    .two,  .change .one{
+        top:calc(50% - 0.4rem);
+    }
+    .change .three{
+        bottom: calc(50% - 0.4rem);
+    }
+     .circle{
+        width: 2rem;
+        height: 2rem;
+    }
+    #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
+        font-size: 2rem;
+    }
+     #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 4rem;
+    }
+    #iconDevelop img{
+        width: 10rem;
+        height: 10rem;
+    }
+     a img{
+        width: 170px;
+    }       
+    textarea{
+        height: 10rem;
+    }
+    input, textarea{
+        font-size:1.5rem;
+        padding: 1rem;
+    }
+    #input-submit{
+        font-size: 2.5rem;
+    }
+}
+@media (max-height:459px) and (min-width:901px) and (max-width:1100px) and (orientation: landscape){
+    #authorImg{
+        -webkit-transform: scale(.3);
+        transform: scale(.4);
+        margin-top: 16rem;
+    }
+    #name{
+        font-size: 4rem;
+    }
+    h3{
+       font-size: 2.5rem; 
+    }
+    #PG h5 ,#Technic h5, #barsPage ul{
+        font-size: 3rem;
+    }
+}
+@media (min-height:320px) and (max-height:370px) and (min-width:901px) and (max-width:1100px) and (orientation: landscape){
+     #authorImg{
+        -webkit-transform: scale(.3);
+        transform: scale(.3);
+        margin-top: 16rem;
+    }
+    textarea{
+        height: 7rem;
+    }
+    input, textarea{
+        padding: 0.5rem;
+    }
+    #input-submit{
+        font-size: 2rem;
+    }
+    #aboutMe article{
+        height: 50%;
+        overflow: scroll;
+    }
+    #course menu{
+        top:30%;
+    }
+}
+    
+@media (max-height:1919px) and (min-width:1101px) and (max-width:1920px) and (orientation: landscape){
+    #authorImg{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        margin-top: 42rem;
+    }
+     #name{
+        font-size: 10rem;
+        top: 16%;
+    }
+     h3{
+        font-size: 6rem;
+    }
+    #hamburger{
+        width: 10rem;
+        height: 7rem;
+    }
+    .two,  .change .one{
+        top:calc(50% - 0.6rem);
+    }
+    .change .three{
+        bottom: calc(50% - 0.6rem);
+    }
+    #barsPage li{
+        width: 80rem;
+        border-bottom: 1rem solid #fff;
+        padding-bottom: 5rem;
+        padding-top: 4rem;
+    }
+    #barsPage ul{
+        font-size: 6rem;
+    }
+    .circle{
+        width: 6rem;
+        height: 6rem;
+    }
+    #moveSubPage{
+        bottom: 10%;
+        width: 40rem;
+    }
+    #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
+        font-size: 5rem;
+    }
+    #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 8rem;
+    }
+    #PG h5 ,#Technic h5{
+        font-size: 6rem;
+    }
+    #course menu{
+        top:20%;
+        overflow: hidden;
+        padding: 0 4rem 0 4rem;
+    }
+    #iconDevelop img{
+        width: 20rem;
+        height: 20rem;
+        margin: 0 2rem 1rem 2rem;
+    }
+    #iconDevelop{
+        width: 70%;
+    }
+    a img{
+        width: 400px;
+    }
+    textarea{
+        height: 25rem;
+    }
+    input, textarea{
+        font-size:3.5rem;
+        padding: 3rem;
+        border-radius: 2rem;
+    }
+    #input-submit{
+        font-size: 6rem;
+        padding: 1rem 0 1rem 0;
+        width: 50%;
+    }
+}
+@media (max-height:939px) and (min-width:1101px) and (max-width:1920px) and (orientation: landscape){
+     #authorImg{
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+        margin-top: 36rem;
+    }
+    #name{
+        font-size: 9rem;
+    }
+     h3{
+        font-size: 5rem;
+    }
+    #aboutMe article{
+        height: 60%;
+    }
+    textarea{
+        height: 20rem;
+    }
+    input, textarea{
+        font-size:3rem;
+        padding: 2.5rem;
+    }
+    #input-submit{
+        font-size: 5rem;
+    }
+    #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
+        font-size: 4rem;
+    }
+}
+@media (max-height:780px) and (min-width:1101px) and (max-width:1920px) and (orientation: landscape){
+    #authorImg{
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+        margin-top: 32rem;
+    }
+    #name{
+        font-size: 7.5rem;
+    }
+    h3{
+        font-size: 4rem;
+    }
+     #hamburger{
+        width: 8rem;
+        height: 5rem;
+    }
+    .two,  .change .one{
+        top:calc(50% - 0.5rem);
+    }
+    .change .three{
+        bottom: calc(50% - 0.5rem);
+    }
+    .circle{
+        width: 3rem;
+        height: 3rem;
+    }
+    #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
+        font-size: 3rem;
+    }
+    #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 5.5rem;
+    }
+    #PG h5 ,#Technic h5{
+        font-size: 4rem;
+    }
+    #aboutMe article{
+        height: 70%;
+    }
+     #iconDevelop img{
+        width: 14rem;
+        height: 14rem;
+    }
+     a img{
+        width: 30rem;
+    }
+    textarea{
+        height: 16rem;
+    }
+    input, textarea{
+        font-size:2.5rem;
+        padding: 2rem;
+    }
+    #input-submit{
+        font-size: 3.5rem;
+    }
+}
+@media (max-height:630px) and (min-width:1101px) and (max-width:1920px) and (orientation: landscape){
     
 }
+
+/*portaint*/
+@media (max-width: 1355px) and (max-height: 1366px) and (orientation:portrait){
+    #authorImg{
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+        margin-top: 40rem;
+    }
+    #name{
+        font-size: 6rem;
+        top:25%;
+    }
+    h3{
+       font-size: 4.5rem; 
+        margin-top: 3rem;
+    }
+     #hamburger{
+        width: 9rem;
+        height: 7rem;
+    }
+    .two,  .change .one{
+        top:calc(50% - 0.7rem);
+    }
+    .change .three{
+        bottom: calc(50% - 0.7rem);
+    }
+    #barsPage ul{
+        font-size: 5.5rem;
+    }
+    #barsPage li{
+        width: 60rem;
+        border-bottom: 0.8rem solid #fff;
+        padding-bottom: 4rem;
+        padding-top: 3rem;
+    }
+    #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 5.5rem;
+    }
+    #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
+        font-size: 3.5rem;
+    }
+    #PG h5, #Technic h5{
+        font-size:4rem;
+    }
+    #course menu{
+        top:20%;
+    }
+     .circle{
+        width: 3rem;
+        height: 3rem;
+    }
+     #iconDevelop img{
+        width: 15rem;
+        height: 15rem;
+    }
+     textarea{
+        height: 25rem;
+    }
+    input, textarea{
+        font-size:3rem;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        margin-top: 2rem
+    }
+    #input-submit{
+        font-size: 3rem;
+        width: 70%;
+    }
+}
+@media (max-width: 799px) and (max-height: 1366px) and (orientation:portrait){
+    #name{
+        font-size: 5rem;
+        top:25%;
+    }
+    h3{
+       font-size: 3.5rem; 
+        margin-top: 3rem;
+    }
+     #barsPage li{
+        width: 45rem;
+    }
+}
+@media (max-width: 550px) and (max-height: 1366px) and (orientation:portrait){
+    #authorImg{
+        -webkit-transform: scale(.6);
+        transform: scale(.6);
+        margin-top: 40rem;
+    }
+     #hamburger{
+        width: 7rem;
+        height: 5rem;
+    }
+    .two,  .change .one{
+        top:calc(50% - 0.5rem);
+    }
+    .change .three{
+        bottom: calc(50% - 0.5rem);
+    }
+    #barsPage ul{
+        font-size: 4rem;
+    }
+    #barsPage li{
+        width: 30rem;
+        border-bottom: 0.6rem solid #fff;
+    }
+    #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 4rem;
+    }
+    #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
+        font-size: 2.5rem;
+    }
+    #PG h5, #Technic h5{
+        font-size:3rem;
+    }
+    #iconDevelop img{
+        width: 10rem;
+        height: 10rem;
+    }
+     .circle{
+        width: 2rem;
+        height: 2rem;
+    }
+    input, textarea{
+        font-size:2rem;
+    }
+    #input-submit{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 340px) and (max-height: 1366px) and (orientation:portrait){
+    #authorImg{
+        -webkit-transform: scale(.4);
+        transform: scale(.4);
+        margin-top: 40rem;
+    }
+    #name{
+        font-size: 3.5rem;
+        top:30%;
+    }
+    h3{
+       font-size: 2.5rem; 
+        margin-top: 2rem;
+    }
+     #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 899px) and (max-height: 900px) and (orientation:portrait){
+    #authorImg{
+        -webkit-transform: scale(.6);
+        transform: scale(.6);
+        margin-top: 32rem;
+    }
+    #name{
+        font-size: 4rem;
+        top:25%;
+    }
+    h3{
+       font-size: 3rem; 
+        margin-top: 2rem;
+    }
+     #hamburger{
+        width: 7rem;
+        height: 5rem;
+    }
+    .two,  .change .one{
+        top:calc(50% - 0.5rem);
+    }
+    .change .three{
+        bottom: calc(50% - 0.5rem);
+    }
+    #barsPage ul{
+        font-size: 4rem;
+    }
+    #barsPage li{
+        width: 40rem;
+    }
+    #course menu{
+        top:20%;
+    }
+    #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 4.5rem;
+    }
+    #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
+        font-size: 2.5rem;
+    }
+    #PG h5, #Technic h5{
+        font-size:3.5rem;
+    }
+    #PG time, #Technic time{
+        font-size:2.5rem;
+    }
+     .circle{
+        width: 2rem;
+        height: 2rem;
+    }
+    #iconDevelop img{
+        width: 10rem;
+        height: 10rem;
+    }
+      textarea{
+        height: 18rem;
+    }
+    input, textarea{
+        font-size:2rem;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+    }
+    #input-submit{
+        font-size: 2.5rem;
+        width: 70%;
+    }
+}
+@media (max-width: 699px) and (max-height: 900px) and (orientation:portrait){
+    #authorImg{
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+        margin-top: 35rem;
+    }
+     #hamburger{
+        width: 6rem;
+        height: 4.5rem;
+    }
+    .two,  .change .one{
+        top:calc(50% - 0.5rem);
+    }
+    .change .three{
+        bottom: calc(50% - 0.5rem);
+    }
+    #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 4rem;
+    }
+    #PG h5, #Technic h5{
+        font-size:3rem;
+    }
+    #PG time, #Technic time{
+        font-size:2.5rem;
+    }
+    #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
+        font-size: 2rem;
+    }
+    
+}
+@media (max-width: 500px) and (max-height: 900px) and (orientation:portrait){
+    #name{
+        font-size: 3.5rem;
+    }
+    h3{
+       font-size: 2.5rem; 
+    }
+    #iconDevelop img{
+        width: 8rem;
+        height: 8rem;
+    }
+}
+@media (max-width: 340px) and (max-height: 900px) and (orientation:portrait){
+    #authorImg{
+        -webkit-transform: scale(.3);
+        transform: scale(.3);
+        margin-top: 32rem;
+    }
+    #iconDevelop img{
+        width: 6rem;
+        height: 6rem;
+    }
+    #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 3rem;
+    }
+     #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
+        font-size: 1.7rem;
+    }
+}
+@media (min-width:501px) and (max-width: 699px) and (max-height: 700px) and (orientation:portrait){
+  #authorImg{
+        -webkit-transform: scale(.4);
+        transform: scale(.4);
+        margin-top: 22rem;
+    }
+    #name{
+        font-size: 3.5rem;
+        top: 25%;
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+     #hamburger{
+        width: 5rem;
+        height: 4rem;
+    }
+    .two,  .change .one{
+        top:calc(50% - 0.4rem);
+    }
+    .change .three{
+        bottom: calc(50% - 0.4rem);
+    }
+    #barsPage ul{
+        font-size: 3.5rem;
+    }
+    #barsPage li{
+        width: 30rem;
+    }
+    #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 3.5rem;
+    }
+     #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
+        font-size: 1.7rem;
+    }
+    #course menu{
+        top:20%;
+    }
+    .circle{
+        width: 2rem;
+        height: 2rem;
+    }
+     #iconDevelop img{
+        width: 8rem;
+        height: 8rem;
+    }
+    #iconProject{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        height: 70%;
+    }
+    #iconProject a:first-child{
+        margin-bottom: 3rem;
+    }
+    a img{
+        width: 12rem;
+    }
+    textarea{
+        height: 15rem;
+    }
+    input, textarea{
+        font-size:1.5rem;
+        padding: 1rem;
+    }
+    #input-submit{
+        font-size: 2rem;
+        width: 50%;
+    }
+}
+@media (max-width: 500px) and (max-height: 700px) and (orientation:portrait){
+    #authorImg{
+        -webkit-transform: scale(.4);
+        transform: scale(.4);
+        margin-top: 30rem;
+    }
+    #name{
+        font-size: 3rem;
+        top:25%;
+    }
+    h3{
+        font-size: 2.5rem; 
+        margin-top: 1.5rem;
+    }
+    #course menu{
+        top:20%;
+    }
+    #iconDevelop img{
+        width: 6rem;
+        height: 6rem;
+    }
+    textarea{
+        height: 15rem;
+    }
+}
+@media (max-width: 340px) and (max-height: 700px) and (orientation:portrait){
+    #authorImg{
+        -webkit-transform: scale(.3);
+        transform: scale(.3);
+        margin-top: 30rem;
+    }
+    #name{
+        font-size: 3rem;
+        top:25%;
+    }
+    h3{
+        font-size: 2rem; 
+        margin-top: 1.5rem;
+    }
+    #course menu{
+        top:20%;
+    }
+    textarea{
+        height: 15rem;
+    }
+    
+}
+@media (max-width: 499px) and (max-height: 500px) and (orientation:portrait){
+    #authorImg{
+        -webkit-transform: scale(.4);
+        transform: scale(.4);
+        margin-top: 14rem;
+    }
+     #name{
+        font-size: 3rem;
+        top: 15%;
+    }
+    h3{
+       font-size: 2rem; 
+    }
+    #aboutMe article{
+        height: 80%;
+    }
+    #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 3.5rem;
+    }
+    #course menu{
+        top:20%;
+    }
+    #iconDevelop img{
+        width: 6rem;
+        height: 6rem;
+    }
+    #iconProject{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        height: 70%;
+    }
+    #iconProject a:first-child{
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    a img{
+        width: 10.5rem;
+    }
+     #contact{
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+     form{
+        top:20%
+    }
+    textarea{
+        height: 15rem;
+    }
+}
+@media (max-width: 380px) and (max-height: 500px) and (orientation:portrait){
+     #authorImg{
+        -webkit-transform: scale(.3);
+        transform: scale(.3);
+        margin-top: 22rem;
+    }
+    #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 3rem;
+    }
+     a img{
+        width: 8rem;
+    }
+     #iconDevelop img{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+@media (min-width:230px) and (max-width: 429px) and (max-height: 430px) and (orientation:portrait){
+   #authorImg{
+        -webkit-transform: scale(.2);
+        transform: scale(.2);
+        margin-top: 22rem;
+    }
+    #name{
+        font-size: 2.5rem;
+        top: 20%;
+    }
+    article{
+        height: 90%;
+    }
+    #course menu{
+        top:20%;
+        height: 80%;
+    }
+    #aboutMe article{
+        height: 80%;
+    }
+    #iconProject{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        height: 70%;
+    }
+    #iconProject a:first-child{
+        margin-bottom: 3rem;
+    }
+    #contact{
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    form{
+        top:17%
+    }
+    textarea{
+        height: 10rem;
+    }
+    #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 2rem;
+    }
+}
+
+

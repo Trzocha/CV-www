@@ -28,9 +28,16 @@ $("document").ready(
                   activePage = $(this).attr("id");
                     
                    if(prevPage != activePage){
-                   $("#secondPage > div:eq("+activePage+")").css("visibility","visible");
-                   $("#secondPage > div:eq("+prevPage+")").css("visibility","hidden");
-                   
+                       
+                   $("#secondPage > div:eq("+activePage+")")
+                    .removeClass("slowToggleHide")
+                    .addClass("slowToggleShow")
+                    .css("visibility","visible");
+                   $("#secondPage > div:eq("+prevPage+")")
+                    .removeClass("slowToggleShow")
+                    .addClass("slowToggleHide")
+                    .css("visibility","hidden");
+                      
                    $("#moveSubPage span:eq("+activePage+")").css("background-color","#000");
                    $("#moveSubPage span:eq("+prevPage+")").css("background-color","#d4d2d4");
                    }
