@@ -49,17 +49,17 @@
                     <span id="1" class="circle"></span>
                     <span id="2" class="circle"></span>
                 </figure>
+               <figure id="icon">
+                    <a href="https://github.com/Trzocha"><img src="http://www.pngall.com/wp-content/uploads/2016/04/Github-Free-PNG-Image.png" alt="github" class="socialIcon"></a>
+                    <a href="https://facebook.com/sebastian.trzoska"><img src="http://www.pngall.com/wp-content/uploads/2016/07/Facebook-180x180.jpg" alt="facebook" class="socialIcon"></a>
+                    <a href="https://linkedin.com/in/sebastian-trzoska-2a826a138/"><img src="http://www.pngall.com/wp-content/uploads/2016/07/Linkedin-PNG-Pic.png" alt="linkedin" class="socialIcon"></a>
+                </figure>
                 <div id="aboutMe">
                     <h4>O mnie</h4>
                     <article>
                         <p>Nazywam się <b><em>Trzoska Sebastian</em></b>. Jestem studentem Politechniki Gdańskiej, ambitny, chętny do zdobywania wiedzy oraz nowych doświadczeń. Lubię wyzwania i chętnie się ich podejmę.</p>
                         <br><br><p>Doświadczenie z programowaniem posiadam niekomercyjne od ponad 2 lat. Każdą wolną chwilę poświęcam kodowaniu. Obecnie zajmuję się zagłębianiem tematyki projektowania frontend stron internetowych. Posiadane umiejętności pozwalają, aby dać oczekiwany efekt wizualny i funkcjonalny, którego oczekuje. Moje projekty można zobaczyć na profilu <strong>GitHub</strong> oraz <strong><a href="#fourPage">TUTAJ</a></strong></p>
                     </article>
-                    <figure id="icon">
-                        <a href="https://github.com/Trzocha"><i class="fa fa-github"></i></a>
-                        <a href="https://facebook.com/sebastian.trzoska"><i class="fa fa-facebook-official"></i></a>
-                        <a href="https://linkedin.com/in/sebastian-trzoska-2a826a138/"><i class="fa fa-linkedin-square"></i></a>
-                    </figure>
                 </div>
                 <div id="education">
                     <h4>Edukacja</h4>
@@ -85,7 +85,7 @@
                     <menu>
                         <ul>
                             <li><p>Tworzenia Stron WWW w <strong>HTML, CSS</strong> od Podstaw do Eksperta z portalu Udemy.com</p></li>
-                            <li><p><strong>PHP & MySQL</strong> od Podstaw do Eksperta z portalu Udemy.com</p></li>
+                            <li><p><strong>PHP &amp; MySQL</strong> od Podstaw do Eksperta z portalu Udemy.com</p></li>
                             <li><p>Web Design for Web Developers: Build Beautiful Websites z portalu Udemy.com</p></li>
                             <li><p><strong>React JS</strong> Web Developer with ES6 z potralu Udemy.com</p></li>
                         </ul>
@@ -104,12 +104,34 @@
                     <img src="img/react-logoo.png">
                 </figure>
             </section>
+            
             <section id="fourPage">
-                <h4>Projekty</h4>
-                <figure id="iconProject">
-                    <a href="pod_strony/BombMan/index.html"><img src="img/BombMan.png"></a>
-                    <a href="pod_strony/Log-in-out/index.html"><img src="img/log-in-out.png"></a>
-                </figure>
+              <h4>Projekty</h4>
+              <div class="slider-container">
+                  <ul class="slider-img">
+                      <li class="selected">
+                        <div class="rotate project1">
+                          <a href="pod_strony/BombMan/index.html">
+                            <span class="button hide">Demo</span>
+                          </a></div></li>
+                      <li>
+                        <div class="rotate project2">
+                           <a href="pod_strony/Log-in-out/index.html">
+                            <span class="button hide">Demo</span>
+                          </a></div></li>
+<!--
+                      <li>
+                        <div class="rotate project3">
+                          <a href="main.html">
+                            <span class="button hide">Demo</span>
+                          </a></div></li>
+-->
+                  </ul>
+                  <ul class="slider-nav">
+                     <li class="prev hide"><span></span><span></span></li> 
+                     <li class="next"><span></span><span></span></li>
+                  </ul>
+              </div>
             </section>
             
             <section id="contact">
@@ -128,6 +150,7 @@
                 <script src="JS/jquery.js"></script>
                 <script src="JS/script.js"></script>
                 <script src="JS/Scroll.js"></script>
+                <script src="JS/gallery.js"></script>
             </section>
 	</body>
 </html>
