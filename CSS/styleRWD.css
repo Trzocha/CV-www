@@ -492,13 +492,13 @@ a img{
     transition: transform .5s, -webkit-transform .5s;
 }
 .slider-img li{
-    -webkit-transform: translateX(300%);
-    transform: translateX(300%);
+    -webkit-transform: translateX(500%);
+    transform: translateX(500%);
 }
 
 li.move-left{
-    -webkit-transform: translateX(-300%);
-    transform: translateX(-300%);
+    -webkit-transform: translateX(-500%);
+    transform: translateX(-500%);
 }
 li.selected{
     -webkit-transform: translateX(0);
@@ -596,6 +596,42 @@ a .button{
         transform: scale(.1);
         margin-top: 12rem;
     }
+    #hamburger{
+        width: 4rem;
+        height: 3rem;
+    }
+    .two,  .change .one{
+        top:calc(50% - 0.4rem);
+    }
+    .change .three{
+        bottom: calc(50% - 0.5rem);
+    }
+    .slider-nav ,.slider-nav .next, .slider-nav .prev{
+        height: 2.7rem;
+    }
+  
+    .slider-container span{
+        height: 3px;
+    }
+    .rotate{
+        width: 40rem;
+        height: 40rem;
+    }
+    .rotate::before{
+         width: 50%;
+        height: 50%;
+    }
+    .rotate a{
+        width: 40%;
+        height: 10%;
+    }
+    .project1::after, .project2::after{
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+    a .button{
+        height: 2rem;
+    }
 }
 @media (min-height:310px) and (max-height:499px) and (max-width:500px) and (orientation: landscape){
     #authorImg{
@@ -631,6 +667,17 @@ a .button{
     }
     textarea{
         height: 4rem;
+    }
+    #icon{
+        width: 70%;
+        left:20%;
+        bottom: 7%;
+        -webkit-transform: scale(.7);
+        transform: scale(.7);
+    }
+    .rotate{
+        -webkit-transform: scale(.7);
+        transform: scale(.7);
     }
 }
 @media (min-height: 375px) and (max-height:699px) and (min-width:501px) and (max-width:700px) and (orientation: landscape){
@@ -718,11 +765,20 @@ a .button{
     #input-submit{
         width: 50%;
     }
+    #icon{
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        left: 34%;
+    }
+    .rotate{
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
 }
 @media (min-height:430px) and (max-height:899px) and (min-width:701px) and (max-width:900px) and (orientation: landscape){
     #authorImg{
-        -webkit-transform: scale(.5);
-        transform: scale(.5);
+        -webkit-transform: scale(.4);
+        transform: scale(.4);
         margin-top: 18rem;
     }
     #name{
@@ -740,14 +796,14 @@ a .button{
         height: 3.5rem;
     }
     .two,  .change .one{
-        top:calc(50% - 0.5rem);
+        top:calc(50% - 0.4rem);
     }
     .change .three{
         bottom: calc(50% - 0.5rem);
     }
     #iconDevelop img{
-        width: 10rem;
-        height: 10rem;
+        width: 9rem;
+        height: 9rem;
         margin: 0 1rem 1rem 0.5rem;
     }
     #iconDevelop{
@@ -786,11 +842,12 @@ a .button{
     #course menu{
         top:20%;
     }
+    
 }
 @media (max-height:1099px) and (min-width:901px) and (max-width:1100px) and (orientation: landscape){
     #authorImg{
-        -webkit-transform: scale(.7);
-        transform: scale(.7);
+        -webkit-transform: scale(.6);
+        transform: scale(.6);
         margin-top: 22rem;
     }
     #name{
@@ -861,6 +918,30 @@ a .button{
     }
     #course menu{
         top:20%;
+    }
+    #icon{
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+        bottom: 15%;
+        left:37%;
+    }
+    .rotate{
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    .slider-nav .next, .slider-nav .prev{
+        margin-right: 4rem;
+        margin-left: 4rem;
+        width: 3rem;
+    }
+    .slider-container span{
+        height: 6px;
+    }
+    .slider-container span:first-child{
+        top:-1px;
+    }
+    .slider-container span:nth-child(2){
+        bottom: -1px;
     }
 }
 @media (max-height:599px) and (min-width:901px) and (max-width:1100px) and (orientation: landscape){
