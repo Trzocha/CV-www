@@ -485,20 +485,20 @@ a img{
 .slider-img li{
     display: block;
     position: absolute;
-     -webkit-transition: .5s;
-    -webkit-transition: -webkit-transform .5s;
-    transition: -webkit-transform .5s;
-    transition: transform .5s;
-    transition: transform .5s, -webkit-transform .5s;
+     -webkit-transition: .8s;
+    -webkit-transition: -webkit-transform .8s;
+    transition: -webkit-transform .8s;
+    transition: transform .8s;
+    transition: transform .8s, -webkit-transform .8s;
 }
 .slider-img li{
-    -webkit-transform: translateX(500%);
-    transform: translateX(500%);
+    -webkit-transform: translateX(800%);
+    transform: translateX(800%);
 }
 
 li.move-left{
-    -webkit-transform: translateX(-500%);
-    transform: translateX(-500%);
+    -webkit-transform: translateX(-800%);
+    transform: translateX(-800%);
 }
 li.selected{
     -webkit-transform: translateX(0);
@@ -543,11 +543,6 @@ li.selected{
 .project2::after{
      background-image: url(../img/log-in-out.png);
 }
-/*
-.project3::after{
-     background-image: url(../img/log-in-out.png);
-}
-*/
 .rotate.active::after{
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
@@ -577,7 +572,7 @@ a .button{
     text-shadow:-1px -1px 0 #2C7982;
 	background: #3EACBA;
 	border:1px solid #379AA4;
-	background-image:-webkit-gradient(linear, left top, left bottom, from(top), color-stop(#48C6D4), to(#3EACBA));
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#48C6D4), to(#3EACBA));
 	background-image:linear-gradient(top, #48C6D4, #3EACBA);
 	border-radius:5px;
 	-webkit-box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0, 0, 0, .5);
@@ -934,13 +929,13 @@ a .button{
         margin-left: 4rem;
         width: 3rem;
     }
-    .slider-container span{
+    .slider-container .slider-nav span{
         height: 6px;
     }
-    .slider-container span:first-child{
+    .slider-container .slider-nav span:first-child{
         top:-1px;
     }
-    .slider-container span:nth-child(2){
+    .slider-container .slider-nav span:nth-child(2){
         bottom: -1px;
     }
 }
@@ -990,6 +985,24 @@ a .button{
     #input-submit{
         font-size: 2.5rem;
     }
+    #icon{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    .rotate{
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    .next:active span:nth-child(1), .prev:active span:nth-child(2){
+        opacity: 0.7;
+        -webkit-box-shadow: 10px -10px 0 0 black;
+        box-shadow: 10px -10px 0 0 black;
+    }
+    .next:active span:nth-child(2), .prev:active span:nth-child(1){
+        opacity: 0.7;
+         -webkit-box-shadow: 10px 10px 0 0 black;
+        box-shadow: 10px 10px 0 0 black;
+    }
 }
 @media (max-height:459px) and (min-width:901px) and (max-width:1100px) and (orientation: landscape){
     #authorImg{
@@ -1005,6 +1018,19 @@ a .button{
     }
     #PG h5 ,#Technic h5, #barsPage ul{
         font-size: 3rem;
+    }
+    #icon{
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+        bottom: 12%;
+    }
+    .rotate{
+        -webkit-transform: scale(.9);
+        transform: scale(.9);
+    }
+    #iconDevelop img{
+        width: 8rem;
+        height: 8rem; 
     }
 }
 @media (min-height:320px) and (max-height:370px) and (min-width:901px) and (max-width:1100px) and (orientation: landscape){
@@ -1033,16 +1059,16 @@ a .button{
     
 @media (max-height:1919px) and (min-width:1101px) and (max-width:1920px) and (orientation: landscape){
     #authorImg{
-        -webkit-transform: scale(1);
-        transform: scale(1);
+        -webkit-transform: scale(.9);
+        transform: scale(.9);
         margin-top: 42rem;
     }
      #name{
-        font-size: 10rem;
+        font-size: 9rem;
         top: 16%;
     }
      h3{
-        font-size: 6rem;
+        font-size: 5rem;
     }
     #hamburger{
         width: 10rem;
@@ -1064,21 +1090,21 @@ a .button{
         font-size: 6rem;
     }
     .circle{
-        width: 6rem;
-        height: 6rem;
+        width: 5rem;
+        height: 5rem;
     }
     #moveSubPage{
         bottom: 10%;
         width: 40rem;
     }
     #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
-        font-size: 5rem;
+        font-size: 4rem;
     }
     #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
-        font-size: 8rem;
+        font-size: 7rem;
     }
     #PG h5 ,#Technic h5{
-        font-size: 6rem;
+        font-size: 5rem;
     }
     #course menu{
         top:20%;
@@ -1086,28 +1112,59 @@ a .button{
         padding: 0 4rem 0 4rem;
     }
     #iconDevelop img{
-        width: 20rem;
-        height: 20rem;
+        width: 17rem;
+        height: 17rem;
         margin: 0 2rem 1rem 2rem;
     }
     #iconDevelop{
         width: 70%;
     }
-    a img{
-        width: 400px;
-    }
     textarea{
-        height: 25rem;
+        height: 23rem;
     }
     input, textarea{
-        font-size:3.5rem;
+        font-size:3rem;
         padding: 3rem;
         border-radius: 2rem;
     }
     #input-submit{
-        font-size: 6rem;
+        font-size: 5rem;
         padding: 1rem 0 1rem 0;
         width: 50%;
+    }
+    #icon{
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        bottom: 20%;
+        left: 43%;
+    }
+    .rotate{
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }
+    .slider-nav .next, .slider-nav .prev{
+        margin-right: 6rem;
+        margin-left: 6rem;
+        width: 5rem;
+    }
+    .slider-container .slider-nav span{
+        height: 10px;
+    }
+    .slider-container .slider-nav span:first-child{
+        top:-11px;
+    }
+    .slider-container .slider-nav span:nth-child(2){
+        bottom: -11px;
+    }
+     .next:active span:nth-child(1), .prev:active span:nth-child(2){
+        opacity: 0.7;
+        -webkit-box-shadow: 20px -20px 0 0 black;
+        box-shadow: 20px -20px 0 0 black;
+    }
+    .next:active span:nth-child(2), .prev:active span:nth-child(1){
+        opacity: 0.7;
+         -webkit-box-shadow: 20px 20px 0 0 black;
+        box-shadow: 20px 20px 0 0 black;
     }
 }
 @media (max-height:939px) and (min-width:1101px) and (max-width:1920px) and (orientation: landscape){
@@ -1137,6 +1194,10 @@ a .button{
     }
     #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
         font-size: 4rem;
+    }
+    #icon, .rotate{
+        -webkit-transform: scale(1.8);
+        transform: scale(1.8);
     }
 }
 @media (max-height:780px) and (min-width:1101px) and (max-width:1920px) and (orientation: landscape){
@@ -1193,6 +1254,10 @@ a .button{
     }
     #input-submit{
         font-size: 3.5rem;
+    }
+    #icon, .rotate{
+        -webkit-transform: scale(1.6);
+        transform: scale(1.6);
     }
 }
 @media (max-height:630px) and (min-width:1101px) and (max-width:1920px) and (orientation: landscape){
