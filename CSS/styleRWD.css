@@ -572,7 +572,7 @@ a .button{
     text-shadow:-1px -1px 0 #2C7982;
 	background: #3EACBA;
 	border:1px solid #379AA4;
-	background-image:-webkit-gradient(linear, left top, left bottom, from(#48C6D4), to(#3EACBA));
+	background-image:-webkit-gradient(linear, left top, left bottom, from(top), color-stop(#48C6D4), to(#3EACBA));
 	background-image:linear-gradient(top, #48C6D4, #3EACBA);
 	border-radius:5px;
 	-webkit-box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0, 0, 0, .5);
@@ -1313,6 +1313,10 @@ a .button{
      .circle{
         width: 3rem;
         height: 3rem;
+        margin-right: 4rem;
+    }
+    #moveSubPage{
+        width: 30rem;
     }
      #iconDevelop img{
         width: 15rem;
@@ -1331,6 +1335,40 @@ a .button{
         font-size: 3rem;
         width: 70%;
     }
+    #icon{
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        left:37%;
+        bottom: 20%;
+    }
+    .rotate{
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }
+    .slider-nav .next, .slider-nav .prev{
+        margin-right: 6rem;
+        margin-left: 6rem;
+        width: 5rem;
+    }
+    .slider-container .slider-nav span{
+        height: 10px;
+    }
+    .slider-container .slider-nav span:first-child{
+        top:-11px;
+    }
+    .slider-container .slider-nav span:nth-child(2){
+        bottom: -11px;
+    }
+     .next:active span:nth-child(1), .prev:active span:nth-child(2){
+        opacity: 0.7;
+        -webkit-box-shadow: 20px -20px 0 0 black;
+        box-shadow: 20px -20px 0 0 black;
+    }
+    .next:active span:nth-child(2), .prev:active span:nth-child(1){
+        opacity: 0.7;
+         -webkit-box-shadow: 20px 20px 0 0 black;
+        box-shadow: 20px 20px 0 0 black;
+    }
 }
 @media (max-width: 799px) and (max-height: 1366px) and (orientation:portrait){
     #name{
@@ -1343,6 +1381,10 @@ a .button{
     }
      #barsPage li{
         width: 45rem;
+    }
+    #icon{
+        left:33%;
+        bottom: 15%;
     }
 }
 @media (max-width: 550px) and (max-height: 1366px) and (orientation:portrait){
@@ -1391,6 +1433,26 @@ a .button{
     #input-submit{
         font-size: 2.5rem;
     }
+    #icon{
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        left:25%;
+    }
+    .rotate{
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+    }
+    .slider-nav .next, .slider-nav .prev{
+        margin-right: 4rem;
+        margin-left: 4rem;
+        width: 4rem;
+    }
+    .slider-container .slider-nav span:first-child{
+        top:-7px;
+    }
+    .slider-container .slider-nav span:nth-child(2){
+        bottom: -7px;
+    }    
 }
 @media (max-width: 340px) and (max-height: 1366px) and (orientation:portrait){
     #authorImg{
@@ -1408,6 +1470,29 @@ a .button{
     }
      #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
         font-size: 3rem;
+    }
+    #icon{
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        left:10%
+    }
+    .rotate{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    .slider-nav .next, .slider-nav .prev{
+        margin-right: 1rem;
+        margin-left: 1rem;
+        width: 3rem;
+    }
+    .slider-container .slider-nav span:first-child{
+        top:-2px;
+    }
+    .slider-container .slider-nav span:nth-child(2){
+        bottom: -2px;
+    } 
+    .slider-container .slider-nav span{
+        height: 7px;
     }
 }
 @media (max-width: 899px) and (max-height: 900px) and (orientation:portrait){
@@ -1475,6 +1560,37 @@ a .button{
         font-size: 2.5rem;
         width: 70%;
     }
+    #icon{
+        -webkit-transform: scale(1.6);
+        transform: scale(1.6);
+        left:32%;
+    }
+    .rotate{
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+    }
+     .slider-nav .next, .slider-nav .prev{
+        margin-right: 3rem;
+        margin-left: 3rem;
+        width: 3rem;
+    }
+    .slider-container .slider-nav span:first-child{
+        top:-2px;
+    }
+    .slider-container .slider-nav span:nth-child(2){
+        bottom: -2px;
+    } 
+    .slider-container .slider-nav span{
+        height: 7px;
+    }
+     .next:active span:nth-child(1), .prev:active span:nth-child(2){
+        -webkit-box-shadow: 10px -10px 0 0 black;
+        box-shadow: 10px -10px 0 0 black;
+    }
+    .next:active span:nth-child(2), .prev:active span:nth-child(1){
+         -webkit-box-shadow: 10px 10px 0 0 black;
+        box-shadow: 10px 10px 0 0 black;
+    }
 }
 @media (max-width: 699px) and (max-height: 900px) and (orientation:portrait){
     #authorImg{
@@ -1504,7 +1620,9 @@ a .button{
     #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
         font-size: 2rem;
     }
-    
+    #icon{
+        left:27%;
+    }
 }
 @media (max-width: 500px) and (max-height: 900px) and (orientation:portrait){
     #name{
@@ -1516,6 +1634,24 @@ a .button{
     #iconDevelop img{
         width: 8rem;
         height: 8rem;
+    }
+    #icon{
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        left:20%;
+    }
+    .rotate{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    .slider-container .slider-nav span:first-child{
+        top:-1px;
+    }
+    .slider-container .slider-nav span:nth-child(2){
+        bottom: -1px;
+    } 
+    .slider-container .slider-nav span{
+        height: 6px;
     }
 }
 @media (max-width: 340px) and (max-height: 900px) and (orientation:portrait){
@@ -1533,6 +1669,29 @@ a .button{
     }
      #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
         font-size: 1.7rem;
+    }
+     #icon{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+         left:10%;
+    }
+    .rotate{
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
+    .slider-nav .next, .slider-nav .prev{
+        margin-right: 2rem;
+        margin-left: 2rem;
+        width: 2rem;
+    }
+    .slider-container .slider-nav span:first-child{
+        top:1px;
+    }
+    .slider-container .slider-nav span:nth-child(2){
+        bottom: 1px;
+    } 
+    .slider-container .slider-nav span{
+        height: 6px;
     }
 }
 @media (min-width:501px) and (max-width: 699px) and (max-height: 700px) and (orientation:portrait){
@@ -1608,6 +1767,14 @@ a .button{
         font-size: 2rem;
         width: 50%;
     }
+    #icon{
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+    }
+    .rotate{
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
 }
 @media (max-width: 500px) and (max-height: 700px) and (orientation:portrait){
     #authorImg{
@@ -1623,6 +1790,22 @@ a .button{
         font-size: 2.5rem; 
         margin-top: 1.5rem;
     }
+     #hamburger{
+        width: 5rem;
+        height: 4rem;
+    }
+    .two,  .change .one{
+        top:calc(50% - 0.4rem);
+    }
+    .change .three{
+        bottom: calc(50% - 0.4rem);
+    }
+    #barsPage ul{
+        font-size: 3rem;
+    }
+    #barsPage li{
+        width: 30rem;
+    }
     #course menu{
         top:20%;
     }
@@ -1632,6 +1815,26 @@ a .button{
     }
     textarea{
         height: 15rem;
+    }
+     #aboutMe p, #education p, #contact footer,#PG time, #Technic time, #course p{
+        font-size: 1.5rem;
+    }
+    #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
+        font-size: 3rem;
+    }
+     .slider-nav .next, .slider-nav .prev{
+        margin-right: 3rem;
+        margin-left: 3rem;
+        width: 2rem;
+    }
+    .slider-container .slider-nav span:first-child{
+        top:1px;
+    }
+    .slider-container .slider-nav span:nth-child(2){
+        bottom: 1px;
+    } 
+    .slider-container .slider-nav span{
+        height: 5px;
     }
 }
 @media (max-width: 340px) and (max-height: 700px) and (orientation:portrait){
@@ -1648,13 +1851,28 @@ a .button{
         font-size: 2rem; 
         margin-top: 1.5rem;
     }
+    .circle{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 2rem;
+    }
+    #barsPage li{
+        width: 25rem;
+    }
     #course menu{
         top:20%;
     }
     textarea{
         height: 15rem;
     }
-    
+    #icon{
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+        bottom: 10%;
+    }
+    #moveSubPage{
+        width: 20rem;
+    }
 }
 @media (max-width: 499px) and (max-height: 500px) and (orientation:portrait){
     #authorImg{
@@ -1664,10 +1882,34 @@ a .button{
     }
      #name{
         font-size: 3rem;
-        top: 15%;
+        top: 17%;
     }
     h3{
        font-size: 2rem; 
+    }
+     #hamburger{
+        width: 4rem;
+        height: 3rem;
+    }
+    .two,  .change .one{
+        top:calc(50% - 0.3rem);
+    }
+    .change .three{
+        bottom: calc(50% - 0.3rem);
+    }
+    #barsPage ul{
+        font-size: 2.5rem;
+    }
+    #barsPage li{
+        width: 25rem;
+        border-bottom: 0.4rem solid #fff;
+        padding-bottom: 3rem;
+        padding-top: 2rem;
+    }
+    .circle{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 2rem;
     }
     #aboutMe article{
         height: 80%;
@@ -1710,6 +1952,15 @@ a .button{
     textarea{
         height: 15rem;
     }
+    #icon{
+        -webkit-transform: scale(.9);
+        transform: scale(.9);
+        bottom: 8%
+    }
+    .rotate{
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
 }
 @media (max-width: 380px) and (max-height: 500px) and (orientation:portrait){
      #authorImg{
@@ -1724,8 +1975,22 @@ a .button{
         width: 8rem;
     }
      #iconDevelop img{
-        width: 4rem;
-        height: 4rem;
+        width: 5rem;
+        height: 5rem;
+    }
+    #icon{
+        left:15%;
+    }
+    textarea{
+        height: 10rem;
+    }
+    input, textarea{
+        font-size:1rem;
+        padding: .8rem;
+    }
+    #input-submit{
+        font-size: 1.5rem;
+        width: 50%;
     }
 }
 @media (min-width:230px) and (max-width: 429px) and (max-height: 430px) and (orientation:portrait){
@@ -1774,6 +2039,12 @@ a .button{
     }
     #aboutMe h4 ,#education h4, #course h4, #thirdPage h4, #fourPage h4, #contact h4{
         font-size: 2rem;
+    }
+    #icon{
+        -webkit-transform: scale(.7);
+        transform: scale(.7);
+        left:5%;
+        bottom:5%;
     }
 }
 
