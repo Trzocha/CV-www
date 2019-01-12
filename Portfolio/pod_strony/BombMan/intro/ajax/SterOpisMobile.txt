@@ -1,8 +1,0 @@
-<h2>STEROWANIE ODBYWA SIE ZA POMOCA PONIZSZYCH PRZYCISKOW:</h2>
-<ul class="buttons intro">
-        <li class="left">&larr;</li >
-        <li  class="right">&rarr;</li >
-        <li  class="down">&darr;</li >
-        <li  class="up">&uarr;</li >
-        <li  class="space">BomB</li >
-</ul>
